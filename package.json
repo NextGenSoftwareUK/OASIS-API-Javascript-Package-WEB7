@@ -1,0 +1,64 @@
+{
+  "name": "web7-oasis-symbiosis-api",
+  "version": "1.0.0",
+  "description": "Isomorphic (Node + browser) JavaScript/TypeScript-friendly client for the WEB7 OASIS Symbiosis API - consenting bio-signal symbiosis sessions and shared collective-consciousness fields built on the OASIS2 WEB7 WebAPI.",
+  "main": "index.js",
+  "module": "index.mjs",
+  "types": "index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "import": "./index.mjs",
+      "require": "./index.js"
+    }
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "files": [
+    "index.js",
+    "index.mjs",
+    "index.d.ts",
+    "src",
+    "docs"
+  ],
+  "scripts": {
+    "generate": "node scripts/generate-modules.js",
+    "docs": "node scripts/generate-docs.js",
+    "types": "node scripts/generate-types.js",
+    "test": "node --test test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NextGenSoftwareUK/OASIS-API-Javascript-Package-WEB7.git"
+  },
+  "author": "NextGen Software Ltd",
+  "license": "MIT",
+  "keywords": [
+    "WEB7 Symbiosis API",
+    "WEB7 WebAPI",
+    "OASIS Symbiosis",
+    "Bio-Signal Processing",
+    "Intention Engine",
+    "Collective Consciousness",
+    "Consent-Based Sessions",
+    "OASIS API",
+    "WEB 4",
+    "WEB 5",
+    "WEB 6",
+    "WEB 7",
+    "Blockchain",
+    "Interoperable",
+    "Metaverse",
+    "Aggregation",
+    "HOT-Swappable-Architecture",
+    "Decentralised",
+    "Distributed",
+    "Abstraction-Layer",
+    "Multi-Network",
+    "SSO",
+    "Agent-Centric",
+    "GOD-Protocol/API",
+    "More Coming..."
+  ]
+}
