@@ -29,8 +29,22 @@ test('setToken attaches Bearer header to subsequent requests', async () => {
 
   const call = fetchImpl.calls[0];
   assert.equal(call.init.headers.Authorization, 'Bearer jwt-abc');
-  assert.equal(call.url, 'https://example.test/v1/symbiosis/sessions');
+  assert.equal(call.url, 'https://example.test/v1/symbiosis/sessions?consentGranted=true');
   assert.equal(call.init.method, 'POST');
+});
+
+test('StartSession is a POST but binds consentGranted/retention from the query string, not the body', async () => {
+  const fetchImpl = fakeFetch([{ match: 'v1/symbiosis/sessions', body: { isError: false, result: { id: 's1' } } }]);
+  const web7 = new Web7Client({ baseUrl: 'https://example.test', persistSession: false, fetchImpl });
+
+  await web7.symbiosis.startSession({ consentGranted: true, retention: 'Ephemeral' });
+
+  const call = fetchImpl.calls[0];
+  assert.equal(call.init.method, 'POST');
+  assert.equal(call.init.body, undefined);
+  assert.match(call.url, /^https:\/\/example\.test\/v1\/symbiosis\/sessions\?/);
+  assert.match(call.url, /consentGranted=true/);
+  assert.match(call.url, /retention=Ephemeral/);
 });
 
 test('route tokens are consumed from the URL, remaining args become the body', async () => {

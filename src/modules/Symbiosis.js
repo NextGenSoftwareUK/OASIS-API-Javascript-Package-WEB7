@@ -19,8 +19,8 @@ class SymbiosisModule {
     this.endSession = makeOperation(http, "v1/symbiosis", "POST", "sessions/{sessionId}/end");
     // get v1/symbiosis/sessions/{sessionId}
     this.getSession = makeOperation(http, "v1/symbiosis", "GET", "sessions/{sessionId}");
-    // post v1/symbiosis/sessions
-    this.startSession = makeOperation(http, "v1/symbiosis", "POST", "sessions");
+    // post v1/symbiosis/sessions (query: consentGranted, retention)
+    this.startSession = makeOperation(http, "v1/symbiosis", "POST", "sessions", {"query":["consentGranted","retention"]});
     // post v1/symbiosis/sessions/{sessionId}/signals
     this.submitSignals = makeOperation(http, "v1/symbiosis", "POST", "sessions/{sessionId}/signals");
   }

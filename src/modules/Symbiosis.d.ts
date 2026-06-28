@@ -10,9 +10,6 @@ export declare class SymbiosisModule {
   /** GET v1/symbiosis/sessions/{sessionId} */
   getSession(args?: Record<string, any>): Promise<OASISResponse>;
 
-  /** POST v1/symbiosis/sessions */
-  startSession(args?: Record<string, any>): Promise<OASISResponse>;
-
   /** POST v1/symbiosis/sessions/{sessionId}/signals */
   submitSignals(args?: Record<string, any>): Promise<OASISResponse>;
 }

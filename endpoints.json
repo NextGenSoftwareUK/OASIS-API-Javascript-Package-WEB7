@@ -2,18 +2,46 @@
   "CollectiveConsciousnessController.cs": {
     "route_prefix": "v1/collective-consciousness",
     "ops": {
-      "CreateSpace": { "verb": "post", "route": "spaces" },
-      "JoinSpace": { "verb": "post", "route": "spaces/{spaceId}/join/{sessionId}" },
-      "GetAggregateField": { "verb": "get", "route": "spaces/{spaceId}/field" }
+      "CreateSpace": {
+        "verb": "post",
+        "route": "spaces",
+        "query": [
+          "name"
+        ]
+      },
+      "JoinSpace": {
+        "verb": "post",
+        "route": "spaces/{spaceId}/join/{sessionId}"
+      },
+      "GetAggregateField": {
+        "verb": "get",
+        "route": "spaces/{spaceId}/field"
+      }
     }
   },
   "SymbiosisController.cs": {
     "route_prefix": "v1/symbiosis",
     "ops": {
-      "StartSession": { "verb": "post", "route": "sessions" },
-      "GetSession": { "verb": "get", "route": "sessions/{sessionId}" },
-      "SubmitSignals": { "verb": "post", "route": "sessions/{sessionId}/signals" },
-      "EndSession": { "verb": "post", "route": "sessions/{sessionId}/end" }
+      "StartSession": {
+        "verb": "post",
+        "route": "sessions",
+        "query": [
+          "consentGranted",
+          "retention"
+        ]
+      },
+      "GetSession": {
+        "verb": "get",
+        "route": "sessions/{sessionId}"
+      },
+      "SubmitSignals": {
+        "verb": "post",
+        "route": "sessions/{sessionId}/signals"
+      },
+      "EndSession": {
+        "verb": "post",
+        "route": "sessions/{sessionId}/end"
+      }
     }
   }
 }

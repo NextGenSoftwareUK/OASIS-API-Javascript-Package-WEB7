@@ -35,7 +35,10 @@ Every generated method takes a single args object:
 - Any key matching a `{token}` in the route template is consumed and
   substituted into the URL (case-insensitive match).
 - Any remaining keys become the query string (GET/DELETE) or JSON body
-  (POST/PUT).
+  (POST/PUT) - **matching the real `[FromQuery]`/`[FromBody]` binding of the
+  underlying C# action**, not just the HTTP verb. `endpoints.json` records
+  exactly which arg names are query-bound per operation (see
+  [`docs/`](./docs/README.md) for the per-method breakdown).
 
 ```js
 // GET v1/symbiosis/sessions/{sessionId} -> sessionId consumed as a route token
@@ -43,14 +46,11 @@ const session = await web7.symbiosis.getSession({ sessionId });
 
 // POST v1/symbiosis/sessions/{sessionId}/signals -> sessionId consumed, samples becomes the body
 await web7.symbiosis.submitSignals({ sessionId, samples: [{ type: 'HeartRate', value: 72 }] });
-```
 
-> **Note:** the underlying C# `StartSession` action reads `consentGranted`
-> and `retention` from the query string even though the route is `POST`.
-> Most servers also accept them as a JSON body via standard ASP.NET model
-> binding, but if you hit a binding mismatch on that one endpoint, pass them
-> as query params on the URL yourself instead of relying on the generated
-> wrapper's body-based POST behaviour.
+// POST v1/symbiosis/sessions -> consentGranted/retention are [FromQuery] even
+// though this is a POST, so they're sent on the URL, not as a JSON body
+const session2 = await web7.symbiosis.startSession({ consentGranted: true, retention: 'Ephemeral' });
+```
 
 Every response has the shape:
 

@@ -12,12 +12,12 @@ URL; everything else becomes the query string (GET/DELETE) or JSON body
 
 ## Methods
 
-| Method | HTTP | Route | Route params |
-| --- | --- | --- | --- |
-| `endSession` | POST | `v1/symbiosis/sessions/{sessionId}/end` | `sessionId` |
-| `getSession` | GET | `v1/symbiosis/sessions/{sessionId}` | `sessionId` |
-| `startSession` | POST | `v1/symbiosis/sessions` | – |
-| `submitSignals` | POST | `v1/symbiosis/sessions/{sessionId}/signals` | `sessionId` |
+| Method | HTTP | Route | Route params | Query params | Body |
+| --- | --- | --- | --- | --- | --- |
+| `endSession` | POST | `v1/symbiosis/sessions/{sessionId}/end` | `sessionId` | – | remaining args |
+| `getSession` | GET | `v1/symbiosis/sessions/{sessionId}` | `sessionId` | – | – |
+| `startSession` | POST | `v1/symbiosis/sessions` | – | `consentGranted`, `retention` | remaining args |
+| `submitSignals` | POST | `v1/symbiosis/sessions/{sessionId}/signals` | `sessionId` | – | remaining args |
 
 ## Example
 

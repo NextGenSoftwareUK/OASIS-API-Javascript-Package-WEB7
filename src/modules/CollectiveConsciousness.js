@@ -15,8 +15,8 @@ class CollectiveConsciousnessModule {
   constructor(http) {
     this._http = http;
 
-    // post v1/collective-consciousness/spaces
-    this.createSpace = makeOperation(http, "v1/collective-consciousness", "POST", "spaces");
+    // post v1/collective-consciousness/spaces (query: name)
+    this.createSpace = makeOperation(http, "v1/collective-consciousness", "POST", "spaces", {"query":["name"]});
     // get v1/collective-consciousness/spaces/{spaceId}/field
     this.getAggregateField = makeOperation(http, "v1/collective-consciousness", "GET", "spaces/{spaceId}/field");
     // post v1/collective-consciousness/spaces/{spaceId}/join/{sessionId}

@@ -12,11 +12,11 @@ URL; everything else becomes the query string (GET/DELETE) or JSON body
 
 ## Methods
 
-| Method | HTTP | Route | Route params |
-| --- | --- | --- | --- |
-| `createSpace` | POST | `v1/collective-consciousness/spaces` | – |
-| `getAggregateField` | GET | `v1/collective-consciousness/spaces/{spaceId}/field` | `spaceId` |
-| `joinSpace` | POST | `v1/collective-consciousness/spaces/{spaceId}/join/{sessionId}` | `spaceId`, `sessionId` |
+| Method | HTTP | Route | Route params | Query params | Body |
+| --- | --- | --- | --- | --- | --- |
+| `createSpace` | POST | `v1/collective-consciousness/spaces` | – | `name` | remaining args |
+| `getAggregateField` | GET | `v1/collective-consciousness/spaces/{spaceId}/field` | `spaceId` | – | – |
+| `joinSpace` | POST | `v1/collective-consciousness/spaces/{spaceId}/join/{sessionId}` | `spaceId`, `sessionId` | – | remaining args |
 
 ## Example
 
