@@ -4,6 +4,9 @@ import type { OASISResponse } from '../core/types';
 export declare class CollectiveConsciousnessModule {
   constructor(http: unknown);
 
+  /** POST v1/collective-consciousness/spaces (query: name) */
+  createSpace(args?: Record<string, any>): Promise<OASISResponse>;
+
   /** GET v1/collective-consciousness/spaces/{spaceId}/field */
   getAggregateField(args?: Record<string, any>): Promise<OASISResponse>;
 
