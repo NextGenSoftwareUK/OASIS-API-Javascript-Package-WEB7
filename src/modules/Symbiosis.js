@@ -15,13 +15,13 @@ class SymbiosisModule {
   constructor(http) {
     this._http = http;
 
-    // post v1/symbiosis/sessions/{sessionId}/end
+    // POST v1/symbiosis/sessions/{sessionId}/end
     this.endSession = makeOperation(http, "v1/symbiosis", "POST", "sessions/{sessionId}/end");
-    // get v1/symbiosis/sessions/{sessionId}
+    // GET v1/symbiosis/sessions/{sessionId}
     this.getSession = makeOperation(http, "v1/symbiosis", "GET", "sessions/{sessionId}");
-    // post v1/symbiosis/sessions (query: consentGranted, retention)
+    // POST v1/symbiosis/sessions (query: consentGranted, retention)
     this.startSession = makeOperation(http, "v1/symbiosis", "POST", "sessions", {"query":["consentGranted","retention"]});
-    // post v1/symbiosis/sessions/{sessionId}/signals
+    // POST v1/symbiosis/sessions/{sessionId}/signals
     this.submitSignals = makeOperation(http, "v1/symbiosis", "POST", "sessions/{sessionId}/signals");
   }
 }

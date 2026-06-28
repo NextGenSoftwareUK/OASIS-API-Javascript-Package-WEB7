@@ -3,19 +3,63 @@
     "route_prefix": "v1/collective-consciousness",
     "ops": {
       "CreateSpace": {
-        "verb": "post",
+        "verb": "POST",
         "route": "spaces",
+        "routeParams": [],
+        "queryParams": [
+          {
+            "name": "name",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "requestType": null,
+        "responseType": {
+          "wrapper": null,
+          "inner": "CollectiveConsciousnessSpace"
+        },
+        "summary": "Shared intention fields where multiple consenting symbiosis sessions co-create. Only the aggregate state is ever exposed.",
         "query": [
           "name"
         ]
       },
       "JoinSpace": {
-        "verb": "post",
-        "route": "spaces/{spaceId}/join/{sessionId}"
+        "verb": "POST",
+        "route": "spaces/{spaceId}/join/{sessionId}",
+        "routeParams": [
+          {
+            "name": "spaceId",
+            "type": "Guid"
+          },
+          {
+            "name": "sessionId",
+            "type": "Guid"
+          }
+        ],
+        "queryParams": [],
+        "requestType": null,
+        "responseType": {
+          "wrapper": null,
+          "inner": "bool"
+        },
+        "summary": null
       },
       "GetAggregateField": {
-        "verb": "get",
-        "route": "spaces/{spaceId}/field"
+        "verb": "GET",
+        "route": "spaces/{spaceId}/field",
+        "routeParams": [
+          {
+            "name": "spaceId",
+            "type": "Guid"
+          }
+        ],
+        "queryParams": [],
+        "requestType": null,
+        "responseType": {
+          "wrapper": null,
+          "inner": "CollectiveConsciousnessSpace"
+        },
+        "summary": null
       }
     }
   },
@@ -23,24 +67,82 @@
     "route_prefix": "v1/symbiosis",
     "ops": {
       "StartSession": {
-        "verb": "post",
+        "verb": "POST",
         "route": "sessions",
+        "routeParams": [],
+        "queryParams": [
+          {
+            "name": "consentGranted",
+            "type": "bool",
+            "optional": false
+          },
+          {
+            "name": "retention",
+            "type": "RetentionMode",
+            "optional": true
+          }
+        ],
+        "requestType": null,
+        "responseType": {
+          "wrapper": null,
+          "inner": "SymbiosisSession"
+        },
+        "summary": "Starts a new symbiosis session. ConsentGranted must be explicitly true.",
         "query": [
           "consentGranted",
           "retention"
         ]
       },
       "GetSession": {
-        "verb": "get",
-        "route": "sessions/{sessionId}"
+        "verb": "GET",
+        "route": "sessions/{sessionId}",
+        "routeParams": [
+          {
+            "name": "sessionId",
+            "type": "Guid"
+          }
+        ],
+        "queryParams": [],
+        "requestType": null,
+        "responseType": {
+          "wrapper": null,
+          "inner": "SymbiosisSession"
+        },
+        "summary": null
       },
       "SubmitSignals": {
-        "verb": "post",
-        "route": "sessions/{sessionId}/signals"
+        "verb": "POST",
+        "route": "sessions/{sessionId}/signals",
+        "routeParams": [
+          {
+            "name": "sessionId",
+            "type": "Guid"
+          }
+        ],
+        "queryParams": [],
+        "requestType": "List<BioSignalSample>",
+        "responseType": {
+          "wrapper": null,
+          "inner": "IntentionState"
+        },
+        "summary": "Submits a batch of raw bio-signal samples and returns the freshly computed intention state."
       },
       "EndSession": {
-        "verb": "post",
-        "route": "sessions/{sessionId}/end"
+        "verb": "POST",
+        "route": "sessions/{sessionId}/end",
+        "routeParams": [
+          {
+            "name": "sessionId",
+            "type": "Guid"
+          }
+        ],
+        "queryParams": [],
+        "requestType": null,
+        "responseType": {
+          "wrapper": null,
+          "inner": "bool"
+        },
+        "summary": "Ends the session instantly - with Ephemeral retention (the default), all signal-derived data is wiped immediately."
       }
     }
   }
