@@ -7,7 +7,7 @@ const { attachGeneratedModules } = require('./modules/index');
 /**
  * Main SDK entry point. Works in Node 18+ and any modern browser.
  *
- *   const { Web7Client } = require('web7-oasis-symbiosis-api');
+ *   const { Web7Client } = require('@oasisomniverse/web7-api');
  *   const web7 = new Web7Client({ baseUrl: 'https://api.web7.oasisomniverse.one' });
  *   web7.setToken(jwtToken); // reuse a WEB4 OASIS JWT - WEB7 has no auth of its own
  *   const session = await web7.symbiosis.startSession({ avatarId, consentGranted: true });

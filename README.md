@@ -1,4 +1,4 @@
-# web7-oasis-symbiosis-api
+# @oasisomniverse/web7-api
 
 Isomorphic (Node 18+ and browser) JavaScript/TypeScript-friendly client for the
 **WEB7 OASIS Symbiosis API** - consenting bio-signal symbiosis sessions and
@@ -10,14 +10,14 @@ browser.
 ## Installation
 
 ```bash
-npm install web7-oasis-symbiosis-api
+npm install @oasisomniverse/web7-api
 ```
 
 ## Quick start
 
 ```js
-const { Web7Client } = require('web7-oasis-symbiosis-api');
-// or: import { Web7Client } from 'web7-oasis-symbiosis-api';
+const { Web7Client } = require('@oasisomniverse/web7-api');
+// or: import { Web7Client } from '@oasisomniverse/web7-api';
 
 const web7 = new Web7Client({ baseUrl: 'https://api.web7.oasisomniverse.one' });
 
