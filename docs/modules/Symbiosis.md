@@ -1,6 +1,6 @@
 # Symbiosis — `web7.symbiosis`
 
-Source controller: [`SymbiosisController.cs`](https://github.com/NextGenSoftwareUK/OASIS2/blob/main/WEB7/NextGenSoftware.OASIS.Web7.WebAPI/Controllers/SymbiosisController.cs)
+Source controller: [`SymbiosisController.cs`](https://github.com/NextGenSoftwareUK/OASIS/blob/main/WEB7/NextGenSoftware.OASIS.Web7.WebAPI/Controllers/SymbiosisController.cs)
 Route prefix: `v1/symbiosis`
 4 operation(s).
 

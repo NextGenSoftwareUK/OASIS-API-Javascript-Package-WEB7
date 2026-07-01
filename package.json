@@ -2,7 +2,7 @@
   "name": "@oasisomniverse/web7-api",
   "version": "1.0.0",
   "publishConfig": { "access": "public" },
-  "description": "Isomorphic (Node + browser) JavaScript/TypeScript-friendly client for the WEB7 OASIS Symbiosis API - consenting bio-signal symbiosis sessions and shared collective-consciousness fields built on the OASIS2 WEB7 WebAPI.",
+  "description": "Isomorphic (Node + browser) JavaScript/TypeScript-friendly client for the WEB7 OASIS Symbiosis API - consenting bio-signal symbiosis sessions and shared collective-consciousness fields built on the OASIS WEB7 WebAPI.",
   "main": "index.js",
   "module": "index.mjs",
   "types": "index.d.ts",

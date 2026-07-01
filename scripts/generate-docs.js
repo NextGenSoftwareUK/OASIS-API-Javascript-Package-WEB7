@@ -92,7 +92,7 @@ for (const file of files) {
 
   const content = `# ${moduleName} — \`web7.${clientProp}\`
 
-Source controller: [\`${sourceFile}\`](https://github.com/NextGenSoftwareUK/OASIS2/blob/main/WEB7/NextGenSoftware.OASIS.Web7.WebAPI/Controllers/${sourceFile})
+Source controller: [\`${sourceFile}\`](https://github.com/NextGenSoftwareUK/OASIS/blob/main/WEB7/NextGenSoftware.OASIS.Web7.WebAPI/Controllers/${sourceFile})
 Route prefix: \`${routePrefix}\`
 ${ops.length} operation(s).
 

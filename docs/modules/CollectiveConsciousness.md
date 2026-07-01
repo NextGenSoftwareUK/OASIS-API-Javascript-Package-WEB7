@@ -1,6 +1,6 @@
 # CollectiveConsciousness — `web7.collectiveConsciousness`
 
-Source controller: [`CollectiveConsciousnessController.cs`](https://github.com/NextGenSoftwareUK/OASIS2/blob/main/WEB7/NextGenSoftware.OASIS.Web7.WebAPI/Controllers/CollectiveConsciousnessController.cs)
+Source controller: [`CollectiveConsciousnessController.cs`](https://github.com/NextGenSoftwareUK/OASIS/blob/main/WEB7/NextGenSoftware.OASIS.Web7.WebAPI/Controllers/CollectiveConsciousnessController.cs)
 Route prefix: `v1/collective-consciousness`
 3 operation(s).
 
