@@ -1,9 +1,9 @@
-# @oasisomniverse/web7-api
+﻿# @oasisomniverse/web7-api
 
 - [@oasisomniverse/web7-api](#oasisomniverseweb7-api)
-  - [About WEB7](#about-web7)
+  - [About WEB 7](#about-web-7)
   - [About The OASIS Omniverse](#about-the-oasis-omniverse)
-  - [Benefits Of Building On The WEB7 Symbiosis API](#benefits-of-building-on-the-web7-symbiosis-api)
+  - [Benefits Of Building On The WEB 7 Symbiosis API](#benefits-of-building-on-the-web-7-symbiosis-api)
   - [WEB 7 Symbiosis API Packages](#web-7-symbiosis-api-packages)
     - [Javascript](#javascript)
     - [C#](#c)
@@ -19,19 +19,19 @@
   - [License](#license)
 
 Isomorphic (Node 18+ and browser) JavaScript/TypeScript-friendly client for the
-**WEB7 OASIS Symbiosis API** - consenting bio-signal symbiosis sessions and
-shared collective-consciousness fields built on the OASIS WEB7 WebAPI.
+**WEB 7 OASIS Symbiosis API** - consenting bio-signal symbiosis sessions and
+shared collective-consciousness fields built on the OASIS WEB 7 WebAPI.
 
 Zero dependencies. Wraps the global `fetch`. Works the same in Node and the
 browser.
 
-## About WEB7
+## About WEB 7
 
 > **"The conscious symbiosis layer — where human intuition and machine intelligence merge as one living system."**
 
-WEB7 bridges human consciousness and machine intelligence through bio-resonant signals (brainwaves, heart rate and other natural body signals), rather than the invasive neural implants other visions of human-AI merging rely on - it's non-invasive, reversible and amplifies human thought instead of replacing it. "Borg-free by design."
+WEB 7 bridges human consciousness and machine intelligence through bio-resonant signals (brainwaves, heart rate and other natural body signals), rather than the invasive neural implants other visions of human-AI merging rely on - it's non-invasive, reversible and amplifies human thought instead of replacing it. "Borg-free by design."
 
-WEB7 builds on **[WEB4](https://www.npmjs.com/package/@oasisomniverse/web4-api)** through **[WEB6](https://www.npmjs.com/package/@oasisomniverse/web6-api)**, and is one layer of the wider **[OASIS Omniverse](https://oasisomniverse.one)** (WEB4 through WEB10).
+WEB 7 builds on **[WEB 4](https://www.npmjs.com/package/@oasisomniverse/web4-api)** through **[WEB 6](https://www.npmjs.com/package/@oasisomniverse/web6-api)**, and is one layer of the wider **[OASIS Omniverse](https://oasisomniverse.one)** (WEB 4 through WEB 10).
 
 ## About The OASIS Omniverse
 
@@ -39,28 +39,28 @@ The OASIS (Open Advanced Sensory Immersion System) is the universal interoperabi
 
 At its core sits one Avatar with one SSO login and one Karma reputation score that travels with you across every app, game and world built on top of it — full transparency and full control over your own data, right down to the field level.
 
-This is the foundation of the OASIS Omniverse: a network of unified layers, WEB4 (identity & unification) through WEB10 (source), each building on the one below to connect blockchains, metaverses, AI, human consciousness and beyond into a single interoperable whole.
+This is the foundation of the OASIS Omniverse: a network of unified layers, WEB 4 (identity & unification) through WEB 10 (source), each building on the one below to connect blockchains, metaverses, AI, human consciousness and beyond into a single interoperable whole.
 
 👉 See the full ecosystem at **[oasisomniverse.one](https://oasisomniverse.one)**.
 
 <a name="web7-symbiosis-benefits"></a>
 
-## Benefits Of Building On The WEB7 Symbiosis API
+## Benefits Of Building On The WEB 7 Symbiosis API
 
 - **Non-invasive, reversible human-AI symbiosis via bio-resonant signals (brainwaves, heart rate) - no neural implants. "Borg-free by design."**
 - **Amplifies human intuition and intention rather than replacing it.**
 - **Consent-based sessions - symbiosis only ever happens with explicit, revocable consent.**
 - **Collective Consciousness spaces let multiple symbiosis sessions aggregate into a shared field.**
-- **Builds directly on WEB4 identity/karma and WEB6 AI orchestration - no separate account/session system to manage.**
+- **Builds directly on WEB 4 identity/karma and WEB 6 AI orchestration - no separate account/session system to manage.**
 - **Integrate any WEB2 or WEB3 tech into your (web)app without having to learn or worry about new tech stacks/languages.**
-- **SSO Avatar with a Karma reputation system (inherited from WEB4 - full accountability, zero crime, dark-net proof).**
+- **SSO Avatar with a Karma reputation system (inherited from WEB 4 - full accountability, zero crime, dark-net proof).**
 - **Maximum integration & interoperability, auto load-balancing, auto fail-over, auto replication.**
 - **HOT-swappable plugin architecture. HTTP REST/gRPC/GraphQL/CLI/Native endpoints.**
 - **Write once, deploy everywhere, now and forever - the GOD Protocol/API.**
 - **Full redundancy/zero downtime - impossible to shut down. Zero lag.**
 - **Decentralised distributed P2P networking - works offline and syncs automatically (even over LAN/Bluetooth/Mesh).**
 - **Agent-centric: you own and store your own data.**
-- **Bio-feedback ready. WEB8 Galactic Mesh ready.**
+- **Bio-feedback ready. WEB 8 Galactic Mesh ready.**
 
 Check out more info below:<br><br>
 [The Power Of The OASIS API](https://drive.google.com/file/d/1nnhGpXcprr6kota1Y85HDDKsBfJHN6sn/view?usp=sharing) <br>
@@ -150,7 +150,7 @@ console.log(result);
 
 ## Calling any endpoint
 
-Every controller on the OASIS WEB7 WebAPI is reachable as a lowerCamel
+Every controller on the OASIS WEB 7 WebAPI is reachable as a lowerCamel
 property on the client (`web7.symbiosis`, `web7.collectiveConsciousness`).
 Every generated method takes a single args object:
 
@@ -188,8 +188,8 @@ interface OASISResponse<T = any> {
 
 ## Auth
 
-WEB7 is an internal bio-symbiosis layer that sits behind the same OASIS
-avatar identity as WEB4/WEB5/WEB6 - it has no avatar/login endpoints of its
+WEB 7 is an internal bio-symbiosis layer that sits behind the same OASIS
+avatar identity as WEB 4/WEB 5/WEB 6 - it has no avatar/login endpoints of its
 own. Reuse a JWT you've already obtained elsewhere (e.g. from
 `web4-oasis-api`'s `client.auth.login()`):
 
@@ -235,7 +235,7 @@ parameter and route details.
 ## Regenerating
 
 The generated modules, type declarations and docs are produced from
-`endpoints.json` (extracted from the WEB7 WebAPI controller source):
+`endpoints.json` (extracted from the WEB 7 WebAPI controller source):
 
 ```bash
 npm run generate   # src/modules/*.js + src/modules/index.js

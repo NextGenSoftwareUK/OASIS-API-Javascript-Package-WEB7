@@ -1,4 +1,4 @@
-# WEB7 Symbiosis & Collective Consciousness API — JavaScript SDK Reference
+﻿# WEB 7 Symbiosis & Collective Consciousness API — JavaScript SDK Reference
 
 Generated from `endpoints.json` (extracted from the WebAPI controllers) by
 `scripts/generate-full-docs.js`. Regenerate the full pipeline after the API
