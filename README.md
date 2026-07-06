@@ -25,6 +25,10 @@ shared collective-consciousness fields built on the OASIS WEB 7 WebAPI.
 Zero dependencies. Wraps the global `fetch`. Works the same in Node and the
 browser.
 
+> **⚠️ Work In Progress — Initial Foundations**
+>
+> WEB 7 is currently at the initial framework and foundations stage. The architecture, endpoints, and SDK have been published so that others interested in this space can explore, experiment, and get involved — but active feature development is not the current priority. The main focus across the OASIS stack right now is **WEB 4 through WEB 6** (particularly WEB 5 and WEB 6). If you are interested in helping build out WEB 7 we would love to have you — see [Do You Want To Get Involved?](#do-you-want-to-get-involved) below.
+
 ## About WEB 7
 
 > **"The conscious symbiosis layer — where human intuition and machine intelligence merge as one living system."**
