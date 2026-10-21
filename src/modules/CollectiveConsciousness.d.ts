@@ -5,11 +5,11 @@ export declare class CollectiveConsciousnessModule {
   constructor(http: unknown);
 
   /** POST v1/collective-consciousness/spaces (query: name) */
-  createSpace(args?: Record<string, any>): Promise<OASISResponse>;
+  createSpace(args?: Record<string, any>, requestOptions?: { idempotencyKey?: string }): Promise<OASISResponse>;
 
   /** GET v1/collective-consciousness/spaces/{spaceId}/field */
-  getAggregateField(args?: Record<string, any>): Promise<OASISResponse>;
+  getAggregateField(args?: Record<string, any>, requestOptions?: { idempotencyKey?: string }): Promise<OASISResponse>;
 
   /** POST v1/collective-consciousness/spaces/{spaceId}/join/{sessionId} */
-  joinSpace(args?: Record<string, any>): Promise<OASISResponse>;
+  joinSpace(args?: Record<string, any>, requestOptions?: { idempotencyKey?: string }): Promise<OASISResponse>;
 }

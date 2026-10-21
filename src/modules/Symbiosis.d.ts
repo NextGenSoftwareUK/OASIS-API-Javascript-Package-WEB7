@@ -5,14 +5,14 @@ export declare class SymbiosisModule {
   constructor(http: unknown);
 
   /** POST v1/symbiosis/sessions/{sessionId}/end */
-  endSession(args?: Record<string, any>): Promise<OASISResponse>;
+  endSession(args?: Record<string, any>, requestOptions?: { idempotencyKey?: string }): Promise<OASISResponse>;
 
   /** GET v1/symbiosis/sessions/{sessionId} */
-  getSession(args?: Record<string, any>): Promise<OASISResponse>;
+  getSession(args?: Record<string, any>, requestOptions?: { idempotencyKey?: string }): Promise<OASISResponse>;
 
   /** POST v1/symbiosis/sessions (query: consentGranted, retention) */
-  startSession(args?: Record<string, any>): Promise<OASISResponse>;
+  startSession(args?: Record<string, any>, requestOptions?: { idempotencyKey?: string }): Promise<OASISResponse>;
 
   /** POST v1/symbiosis/sessions/{sessionId}/signals */
-  submitSignals(args?: Record<string, any>): Promise<OASISResponse>;
+  submitSignals(args?: Record<string, any>, requestOptions?: { idempotencyKey?: string }): Promise<OASISResponse>;
 }
